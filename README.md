@@ -78,6 +78,23 @@ docker run -v /path/to/credentials:/credentials \
 ADOBE_CLIENT_ID : 415d3d80cdc74823bd877e17add7346b
 <br>
 
+### Alternate Running Commands 
+To run backend --
+1. Locate to backend folder <br>
+```bash
+pip install -r requirements. txt
+python -m uvicorn app.main:app --reload 
+```
+
+
+To run frontend--
+1. Locate to frontend folder <br>
+```bash
+npm install
+npm run dev
+```
+<br>
+
 ### 🌐 Access
 
 Frontend: http://localhost:8080
