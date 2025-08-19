@@ -13,7 +13,7 @@ class QuestionRequest(BaseModel):
 async def upload_pdfs(files: List[UploadFile] = File(...)):
     if not files:
         raise HTTPException(status_code=400, detail="No files uploaded.")
-    temp_dir = "temp_uploads"
+    temp_dir = "/app/temp_uploads"
     os.makedirs(temp_dir, exist_ok=True)
     file_paths = []
     try:
