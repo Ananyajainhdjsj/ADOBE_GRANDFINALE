@@ -26,7 +26,7 @@ It features a React.js frontend and a FastAPI backend, containerized into a sing
 
 ### 📂 Project Structure
 ```bash
-adobe_website/
+adobe_grandfinale/
 ├── backend1/         # FastAPI backend
 │   ├── main.py
 │   ├── requirements.txt
@@ -58,7 +58,7 @@ AZURE_TTS_ENDPOINT	Azure TTS endpoint
 
 ### 🐳 Build & Run Instructions
 1. Build the Docker image <br>
-```bash docker build --platform linux/amd64 -t chalja .```
+```bash docker build --platform linux/amd64 -t adobe_grandfinale .```
 
 2. Run the container <br>
 ```bash
@@ -70,7 +70,7 @@ docker run -v /path/to/credentials:/credentials \
   -e TTS_PROVIDER=azure \
   -e AZURE_TTS_KEY=<TTS_KEY> \
   -e AZURE_TTS_ENDPOINT=<TTS_ENDPOINT> \
-  -p 8080:8080 adobe_website
+  -p 8080:8080 adobe_grandfinale
 ```
 
 ### 🌐 Access
