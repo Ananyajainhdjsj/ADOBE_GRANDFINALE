@@ -176,3 +176,6 @@ npm run dev
 
 Frontend: http://localhost:8080 <br>
 Backend API: http://localhost:8080/api
+
+Backend UI viewer: http://localhost:8080/docs
+
