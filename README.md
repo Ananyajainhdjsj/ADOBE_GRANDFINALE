@@ -74,6 +74,9 @@ docker run -v /path/to/credentials:/credentials \
   -e AZURE_TTS_ENDPOINT=<TTS_ENDPOINT> \
   -p 8080:8080 ADOBE_GRANDFINALE
 ```
+<br>
+ADOBE_CLIENT_ID : 415d3d80cdc74823bd877e17add7346b
+<br>
 
 ### 🌐 Access
 
