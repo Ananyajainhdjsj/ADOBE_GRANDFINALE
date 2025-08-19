@@ -14,6 +14,7 @@ COPY backend1/app ./app
 # ensure storage mount
 RUN mkdir -p /app/storage
 VOLUME ["/app/storage"]
-
+RUN mkdir -p /app/temp_uploads
+VOLUME ["/app/temp_uploads"]
 EXPOSE 8080
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080", "--workers", "1"]
