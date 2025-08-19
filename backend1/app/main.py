@@ -55,7 +55,7 @@ def startup_event():
     from app.config import PDF_DIR, ANNOTATION_DIR, INSIGHTS_DIR, INDEX_DIR
     for d in (PDF_DIR, ANNOTATION_DIR, INSIGHTS_DIR, INDEX_DIR):
         os.makedirs(d, exist_ok=True)
-        app.mount("/", StaticFiles(directory="frontend/dist", html=True), name="frontend")
+        #app.mount("/", StaticFiles(directory="frontend/dist", html=True), name="frontend")
 FRONTEND_DIST = os.path.join(os.path.dirname(__file__), "frontend", "dist")
 
 if os.path.exists(FRONTEND_DIST):

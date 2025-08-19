@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 from PyPDF2 import PdfReader
 import os
 
-genai.configure(api_key=os.environ.get("GOOGLE_API_KEY", "AIzaSyDevLzJIM-I20i3OBTCE4ZINUBfwRzNuE8"))
+genai.configure(api_key=os.environ.get("GEMINI_API_KEY", "AIzaSyDevLzJIM-I20i3OBTCE4ZINUBfwRzNuE8"))
 embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 def embed_text(text):
