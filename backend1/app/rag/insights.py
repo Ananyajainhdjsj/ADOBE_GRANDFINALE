@@ -33,9 +33,8 @@ def generate_insights(highlight):
     related_texts = [n["text"] for n in neighbors]
     related = "\n\n".join(related_texts)
     prompt = PROMPT.format(highlight=highlight, related=related)
-    response = genai.GenerativeModel("gemini-2.0-flash").generate_content(
-        prompt,
-        generation_config={"response_mime_type": "application/json"}
+    response = genai.GenerativeModel("gemini-2.5-flash").generate_content(
+        prompt
     )
     try:
         result = json.loads(response.text)
