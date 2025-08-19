@@ -10,14 +10,18 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Ensure both GEMINI_API_KEY and GOOGLE_API_KEY are set for compatibility
 api_key = os.getenv("GEMINI_API_KEY")
+google_api_key = os.getenv("GOOGLE_API_KEY")
 creds_file = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 if api_key:
     os.environ["GEMINI_API_KEY"] = api_key
+if google_api_key:
+    os.environ["GOOGLE_API_KEY"] = google_api_key
 elif creds_file and os.path.exists(creds_file):
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = creds_file
-else:
-    raise ValueError("Either GEMINI_API_KEY or GOOGLE_APPLICATION_CREDENTIALS must be set.")
+elif not api_key and not google_api_key:
+    raise ValueError("Either GEMINI_API_KEY or GOOGLE_API_KEY or GOOGLE_APPLICATION_CREDENTIALS must be set.")
 model_name = os.getenv("GEMINI_MODEL", "models/gemini-2.5-flash")
 
 def get_pdf_text(pdf_docs):
